@@ -58,23 +58,25 @@
     background: white;
     overflow: hidden;
   }
-  
+
   #cover > img {
     width: 100%;
     object-fit: scale-down;
+    opacity: 0.8;
   }
-  
+
   .banner {
     height: 70px;
     background: #ff5f00;
     color: white;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 3px 3px rgb(255 255 255 / 40%) inset;
   }
   
   .banner > div:first-child {
     height: 100%;
-    padding: 5px;
+    padding: 8px 6px;
     font-size: 0.6rem;
     text-transform: uppercase;
     display: flex;
@@ -88,6 +90,7 @@
     height: 22px;
     background: white;
     padding: 3px;
+    opacity: 0.95;
   }
   
   #map:hover #left-top {
