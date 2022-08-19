@@ -62,7 +62,7 @@
   #cover > img {
     width: 100%;
     object-fit: scale-down;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .banner {
@@ -71,7 +71,6 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 3px 3px rgb(255 255 255 / 40%) inset;
   }
   
   .banner > div:first-child {
