@@ -3,6 +3,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #left-bottom {
@@ -50,7 +51,7 @@ body {
   transition: transform 0.5s, opacity 0s 0.5s;
   transform-origin: 0% 0%;
   background-size: contain;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 }
 
 #map:hover .face {
@@ -58,13 +59,42 @@ body {
 }
 
 #cover {
-  background: #FF5F00;
   backface-visibility: hidden;
   transition-delay: 0.5s;
-  color: white;
-  text-align: center;
   box-sizing: border-box;
-  padding: 20px;
+  background: white;
+  overflow: hidden;
+}
+
+#cover > img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.banner {
+  height: 70px;
+  background: #FF5F00;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner > div:first-child {
+  height: 100%;
+  padding: 5px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.banner img {
+  width: 22px;
+  height: 22px;
+  background: white;
+  padding: 3px;
 }
 
 

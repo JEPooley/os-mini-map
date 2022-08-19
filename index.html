@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find Us Example | Ordnance Survey</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -16,13 +22,24 @@
       <div class="face" id="middle-bottom"></div>
       <div class="face" id="right-bottom"></div>
       <div class="face" id="right-top"></div>
-      <div class="face" id="cover">COVER</div>
+      <div class="face" id="cover">
+        <div class="banner">
+          <div>
+            <div>Find Us</div>
+            <div>OS Explorer</div>
+          </div>
+          <div>
+            <img src="images/logomark-colour.svg" alt="Ordnance Survey Logo" />
+          </div>
+        </div>
+        <img src="images/forest.jpg" alt="Forest">
+      </div>
     </div>
   </body>
 
   <script defer>
-    setTimeout(() =>{
-        document.getElementById("right-top").style.opacity = 1;
-    }, 1000)
+    setTimeout(() => {
+      document.getElementById("right-top").style.opacity = 1;
+    }, 1000);
   </script>
 </html>
