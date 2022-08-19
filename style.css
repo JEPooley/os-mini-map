@@ -3,156 +3,49 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  background: rgb(220, 220, 220);
+  color: #333333;
 }
 
-#left-bottom {
-  background-image: url("images/cambridge-BL.png");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#middle-bottom {
-  background-image: url("images/cambridge-BM.png");
-}
-
-#right-bottom {
-  background-image: url("images/cambridge-BR.png");
-}
-
-#middle-top {
-  opacity: 0;
-  top: -180px;
-  background-image: url("images/cambridge-TM.png");
-}
-
-#right-top {
-  background-image: url("images/cambridge-TR.png");
-  opacity: 0;
-}
-
-#left-top {
-  opacity: 0;
-  top: -180px;
-  background-image: url("images/cambridge-TL.png");
-}
-
-#map {
-    cursor: pointer;
-    position: fixed;
-    bottom: 205px;
-    left: 25px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.face {
-  width: 120px;
-  height: 180px;
-  position: absolute;
-  transition: transform 0.5s, opacity 0s 0.5s, box-shadow 0.5s;
-  transform-origin: 0% 0%;
-  background-size: contain;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#map:hover .face {
-  transition: transform 0.5s 0.5s, opacity 0s 0.5s, box-shadow 0.5s 0.5s;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-}
-
-#cover {
-  backface-visibility: hidden;
-  transition-delay: 0.5s;
-  box-sizing: border-box;
-  background: white;
-  overflow: hidden;
-}
-
-#cover > img {
+main {
+  background: rgb(240, 240, 240);
   width: 100%;
-  object-fit: scale-down;
-}
-
-.banner {
-  height: 70px;
-  background: #FF5F00;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-.banner > div:first-child {
-  height: 100%;
-  padding: 5px;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 800px;
+  padding: 40px 60px;
   box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
-.banner img {
-  width: 22px;
-  height: 22px;
-  background: white;
-  padding: 3px;
+h1 {
+  font-size: 2.8rem;
+  margin-top: 0;
+  color: #453c90;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-
-#map:hover #left-top {
-  opacity: 1;
+main img {
+  height: 200px;
 }
 
-#map:hover #cover {
-  transform: rotateX(180deg);
-  transition-delay: 0s;
+h1 > img {
+  height: 3rem;
 }
 
-#map:hover #middle-top {
-  transform: translateX(120px);
-  opacity: 1;
-}
-
-#map:hover #middle-bottom {
-  transform: translateX(120px);
-}
-
-#map:hover #right-bottom {
-  transform: translateX(240px);
-}
-
-#right-top {
-  animation: flip-in 1s forwards;
-}
-
-#map:hover #right-top {
-  animation: flip-out 1s forwards;
-}
-
-@keyframes flip-out {
-  0% {
-    transform: rotateX(0deg) translateX(0px);
-  }
-
-  50% {
-    transform: rotateX(180deg) translateX(0px);
-  }
-
-  100% {
-    transform: rotateX(180deg) translateX(240px);
-  }
-}
-
-@keyframes flip-in {
-  0% {
-    transform: rotateX(180deg) translateX(240px);
-  }
-
-  50% {
-    transform: rotateX(180deg) translateX(0px);
-  }
-
-  100% {
-    transform: rotateX(0deg) translateX(0px);
-  }
+main > div {
+  background: rgb(220, 220, 220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
 }
