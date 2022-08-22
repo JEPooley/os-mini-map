@@ -51,6 +51,21 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
+#attribution {
+  position: absolute;
+  width: 14rem;
+  right: -354px;
+  bottom: -176px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+}
+
+#map:hover #attribution {
+  transition: opacity 0.2s 0.8s ease-in;
+  opacity: 1;
+}
+
 #cover {
   backface-visibility: hidden;
   transition-delay: 0.5s;
@@ -66,7 +81,7 @@
 }
 
 #map-code {
-  background: #FFE330;
+  background: #ffe330;
   height: 25px;
   color: black;
   font-size: 0.6rem;
