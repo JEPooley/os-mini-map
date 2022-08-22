@@ -1,30 +1,30 @@
 #left-bottom {
-  background-image: url("images/mini-map/cambridge-BL.png");
+  background-image: url("images/mini-map/map-BL.png");
 }
 
 #middle-bottom {
-  background-image: url("images/mini-map/cambridge-BM.png");
+  background-image: url("images/mini-map/map-BM.png");
 }
 
 #right-bottom {
-  background-image: url("images/mini-map/cambridge-BR.png");
+  background-image: url("images/mini-map/map-BR.png");
 }
 
 #middle-top {
   opacity: 0;
   top: -180px;
-  background-image: url("images/mini-map/cambridge-TM.png");
+  background-image: url("images/mini-map/map-TM.png");
 }
 
 #right-top {
-  background-image: url("images/mini-map/cambridge-TR.png");
+  background-image: url("images/mini-map/map-TR.png");
   opacity: 0;
 }
 
 #left-top {
   opacity: 0;
   top: -180px;
-  background-image: url("images/mini-map/cambridge-TL.png");
+  background-image: url("images/mini-map/map-TL.png");
 }
 
 #map {
@@ -48,7 +48,7 @@
 
 #map:hover .face {
   transition: transform 0.5s 0.5s, opacity 0s 0.5s, box-shadow 0.5s 0.5s;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 #cover {
