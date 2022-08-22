@@ -1,152 +1,159 @@
 #left-bottom {
-    background-image: url("images/mini-map/cambridge-BL.png");
-  }
-  
-  #middle-bottom {
-    background-image: url("images/mini-map/cambridge-BM.png");
-  }
-  
-  #right-bottom {
-    background-image: url("images/mini-map/cambridge-BR.png");
-  }
-  
-  #middle-top {
-    opacity: 0;
-    top: -180px;
-    background-image: url("images/mini-map/cambridge-TM.png");
-  }
-  
-  #right-top {
-    background-image: url("images/mini-map/cambridge-TR.png");
-    opacity: 0;
-  }
-  
-  #left-top {
-    opacity: 0;
-    top: -180px;
-    background-image: url("images/mini-map/cambridge-TL.png");
-  }
-  
-  #map {
-    cursor: pointer;
-    position: fixed;
-    bottom: 205px;
-    left: 25px;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-  
-  .face {
-    width: 120px;
-    height: 180px;
-    position: absolute;
-    transition: transform 0.5s, opacity 0s 0.5s, box-shadow 0.5s;
-    transform-origin: 0% 0%;
-    background-size: contain;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  #map:hover .face {
-    transition: transform 0.5s 0.5s, opacity 0s 0.5s, box-shadow 0.5s 0.5s;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  }
-  
-  #cover {
-    backface-visibility: hidden;
-    transition-delay: 0.5s;
-    box-sizing: border-box;
-    background: white;
-    overflow: hidden;
+  background-image: url("images/mini-map/cambridge-BL.png");
+}
+
+#middle-bottom {
+  background-image: url("images/mini-map/cambridge-BM.png");
+}
+
+#right-bottom {
+  background-image: url("images/mini-map/cambridge-BR.png");
+}
+
+#middle-top {
+  opacity: 0;
+  top: -180px;
+  background-image: url("images/mini-map/cambridge-TM.png");
+}
+
+#right-top {
+  background-image: url("images/mini-map/cambridge-TR.png");
+  opacity: 0;
+}
+
+#left-top {
+  opacity: 0;
+  top: -180px;
+  background-image: url("images/mini-map/cambridge-TL.png");
+}
+
+#map {
+  cursor: pointer;
+  position: fixed;
+  bottom: 205px;
+  left: 25px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  width: 120px;
+  height: 180px;
+  position: absolute;
+  transition: transform 0.5s, opacity 0s 0.5s, box-shadow 0.5s;
+  transform-origin: 0% 0%;
+  background-size: contain;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#map:hover .face {
+  transition: transform 0.5s 0.5s, opacity 0s 0.5s, box-shadow 0.5s 0.5s;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+#cover {
+  backface-visibility: hidden;
+  transition-delay: 0.5s;
+  box-sizing: border-box;
+  background: white;
+  overflow: hidden;
+}
+
+#cover > img {
+  width: 100%;
+  object-fit: scale-down;
+  opacity: 0.9;
+}
+
+#map-code {
+  background: #FFE330;
+  height: 25px;
+  color: black;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.banner {
+  height: 70px;
+  background: #ff5f00;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner > div:first-child {
+  height: 100%;
+  padding: 8px 6px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.banner img {
+  width: 22px;
+  height: 22px;
+  background: white;
+  padding: 3px;
+  opacity: 0.95;
+}
+
+#map:hover #left-top {
+  opacity: 1;
+}
+
+#map:hover #cover {
+  transform: rotateX(180deg);
+  transition-delay: 0s;
+}
+
+#map:hover #middle-top {
+  transform: translateX(120px);
+  opacity: 1;
+}
+
+#map:hover #middle-bottom {
+  transform: translateX(120px);
+}
+
+#map:hover #right-bottom {
+  transform: translateX(240px);
+}
+
+#right-top {
+  animation: flip-in 1s forwards;
+}
+
+#map:hover #right-top {
+  animation: flip-out 1s forwards;
+}
+
+@keyframes flip-out {
+  0% {
+    transform: rotateX(0deg) translateX(0px);
   }
 
-  #cover > img {
-    width: 100%;
-    object-fit: scale-down;
-    opacity: 0.9;
+  50% {
+    transform: rotateX(180deg) translateX(0px);
   }
 
-  .banner {
-    height: 70px;
-    background: #ff5f00;
-    color: white;
-    display: flex;
-    justify-content: space-between;
+  100% {
+    transform: rotateX(180deg) translateX(240px);
   }
-  
-  .banner > div:first-child {
-    height: 100%;
-    padding: 8px 6px;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+}
+
+@keyframes flip-in {
+  0% {
+    transform: rotateX(180deg) translateX(240px);
   }
-  
-  .banner img {
-    width: 22px;
-    height: 22px;
-    background: white;
-    padding: 3px;
-    opacity: 0.95;
+
+  50% {
+    transform: rotateX(180deg) translateX(0px);
   }
-  
-  #map:hover #left-top {
-    opacity: 1;
+
+  100% {
+    transform: rotateX(0deg) translateX(0px);
   }
-  
-  #map:hover #cover {
-    transform: rotateX(180deg);
-    transition-delay: 0s;
-  }
-  
-  #map:hover #middle-top {
-    transform: translateX(120px);
-    opacity: 1;
-  }
-  
-  #map:hover #middle-bottom {
-    transform: translateX(120px);
-  }
-  
-  #map:hover #right-bottom {
-    transform: translateX(240px);
-  }
-  
-  #right-top {
-    animation: flip-in 1s forwards;
-  }
-  
-  #map:hover #right-top {
-    animation: flip-out 1s forwards;
-  }
-  
-  @keyframes flip-out {
-    0% {
-      transform: rotateX(0deg) translateX(0px);
-    }
-  
-    50% {
-      transform: rotateX(180deg) translateX(0px);
-    }
-  
-    100% {
-      transform: rotateX(180deg) translateX(240px);
-    }
-  }
-  
-  @keyframes flip-in {
-    0% {
-      transform: rotateX(180deg) translateX(240px);
-    }
-  
-    50% {
-      transform: rotateX(180deg) translateX(0px);
-    }
-  
-    100% {
-      transform: rotateX(0deg) translateX(0px);
-    }
-  }
-  
+}
