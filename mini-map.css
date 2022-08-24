@@ -1,30 +1,23 @@
-#left-bottom {
-  background-image: url("images/mini-map/map-BL.png");
-}
-
-#middle-bottom {
-  background-image: url("images/mini-map/map-BM.png");
-}
-
-#right-bottom {
-  background-image: url("images/mini-map/map-BR.png");
-}
-
 #middle-top {
   opacity: 0;
   top: -180px;
-  background-image: url("images/mini-map/map-TM.png");
 }
 
 #right-top {
-  background-image: url("images/mini-map/map-TR.png");
   opacity: 0;
+  transition: transform 0.5s;
+}
+
+#right-top div {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s 0.5s;
+  transform-origin: 0% 0%;
 }
 
 #left-top {
   opacity: 0;
   top: -180px;
-  background-image: url("images/mini-map/map-TL.png");
 }
 
 #map {
@@ -46,14 +39,22 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-#map:hover .face {
+.face>img,
+#right-top div img {
+  object-fit: cover;
+  width: 100%;
+}
+
+#map:hover .face,
+#map:hover #right-top div {
   transition: transform 0.5s 0.5s, opacity 0s 0.5s, box-shadow 0.5s 0.5s;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 #attribution {
   position: absolute;
-  width: 14rem;
+  width: 15rem;
+  text-align: center;
   right: -354px;
   bottom: -176px;
   font-size: 0.8rem;
@@ -74,7 +75,7 @@
   overflow: hidden;
 }
 
-#cover > img {
+#cover>img {
   width: 100%;
   object-fit: scale-down;
   opacity: 0.9;
@@ -96,7 +97,7 @@
   justify-content: space-between;
 }
 
-.banner > div:first-child {
+.banner>div:first-child {
   height: 100%;
   padding: 8px 6px;
   font-size: 0.6rem;
@@ -137,38 +138,12 @@
   transform: translateX(240px);
 }
 
-#right-top {
-  animation: flip-in 1s forwards;
+#map:hover #right-top div {
+  transform: rotateX(180deg);
+  transition: transform 0.5s;
 }
 
 #map:hover #right-top {
-  animation: flip-out 1s forwards;
-}
-
-@keyframes flip-out {
-  0% {
-    transform: rotateX(0deg) translateX(0px);
-  }
-
-  50% {
-    transform: rotateX(180deg) translateX(0px);
-  }
-
-  100% {
-    transform: rotateX(180deg) translateX(240px);
-  }
-}
-
-@keyframes flip-in {
-  0% {
-    transform: rotateX(180deg) translateX(240px);
-  }
-
-  50% {
-    transform: rotateX(180deg) translateX(0px);
-  }
-
-  100% {
-    transform: rotateX(0deg) translateX(0px);
-  }
+  transform: translateX(240px);
+  transition: transform 0.5s 0.5s;
 }
